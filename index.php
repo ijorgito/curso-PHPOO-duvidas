@@ -1,7 +1,7 @@
 <?php
 
-define('CLASS_DIR','src/');
-set_include_path(get_include_path().PATH_SEPARATOR.CLASS_DIR);
+define('CLASS_DIR','src'.DIRECTORY_SEPARATOR);
+set_include_path(get_include_path().DIRECTORY_SEPARATOR.CLASS_DIR);
 spl_autoload_register();
 
 $x = new SON\Conta\Types\ContaType();
@@ -25,9 +25,9 @@ require_once "Tenis.php";
 
 $tenis = new Tenis();
 if ($tenis instanceof Tenis) {
-    echo "É um tipo de Tenis";
+    echo "ï¿½ um tipo de Tenis";
 }else{
-    echo "Não é um tipo de Tenis";
+    echo "Nï¿½o ï¿½ um tipo de Tenis";
 }
 
 echo "<p>INTERFACE</p>";
@@ -42,7 +42,7 @@ $produto = new Produto();
 
 $produto
         ->setNome("Tenis Exemplo")
-        ->setDescricao("Essa é a Descrição")
+        ->setDescricao("Essa ï¿½ a Descriï¿½ï¿½o")
         ->setEstoque(10)
         ->setValor(1000)
 ;
