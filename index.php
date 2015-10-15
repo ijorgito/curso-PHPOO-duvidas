@@ -1,11 +1,8 @@
 <?php
-
-define('CLASS_DIR','src'.DIRECTORY_SEPARATOR);
-set_include_path(get_include_path().DIRECTORY_SEPARATOR.CLASS_DIR);
-spl_autoload_register();
+require_once "autoload.php";
 
 $x = new SON\Conta\Types\ContaType();
-$x->deposito(10);
+$x->depositar(10);
 echo $x->getSaldo();
 
 /*
